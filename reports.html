@@ -1,0 +1,28 @@
+<HTML>
+<TITLE>Daily Activity Report</TITLE>
+<h1>Select Type of Report</h1>   
+<BODY>
+<form action="report.php" method="post">
+<table border="1" width = "80%" cellspacing="10">
+	<tr><td><input type="radio" name="report" value="1" /> Production Report for past 14 Days</td></tr>
+	<tr><td><input type="radio" name="report" value="2" checked /> Job History</td></tr>
+	<tr><td><input type="radio" name="report" value="3" /> Tool Change Records</td></tr>
+	<tr><td><input type="radio" name="report" value="4" /> Production, Maintenance and Power Failure Reports</td></tr>
+	<tr><td><input type="radio" name="report" value="5" /> Power Failures</td></tr>
+	<tr><td colspan=2 align="center"><input type="submit" name="Submit" value="Submit" /></td></tr>
+</table>
+
+<table border="1" width = "80%" cellspacing="10">
+	<tr><td align="Center"><a href="mainForm.php">Submit Reports</a> </td></tr>
+</table>
+
+
+
+</form> 
+     
+     
+</BODY>
+
+
+
+</HTML>
