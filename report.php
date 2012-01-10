@@ -173,6 +173,49 @@ else if($Report_ID==5) //power failure
 bottomlink();
 }
 
+else if($Report_ID==6) //rejection report
+{
+		print("<form name=\"power\" action=\"rejection.php\" method=\"post\" enctype = \"multipart/form-data\">\n");
+		print("<table>");		
+		print("<tr><td>");
+		print("Start Date.</td>");
+		$sdt=date('d-m-Y');
+		print("<td><input type=\"Text\" name=\"StartDate\" value='$sdt'/></td>");			
+		print("<td>");	
+		print("End Date.</td>");
+		$edt=date('d-m-Y');
+		print("<td><input type=\"Text\" name=\"EndDate\" value='$edt'/></td>");			
+		print("</tr>");
+		print("<tr><td><input type=\"submit\" name=\"submit\" value=\"Submit\"/></td></tr>");
+		print("</form>");
+
+		print("<script language=\"JavaScript\">");
+ 		print("new validateForm(document.forms['power']);");
+ 		print("</script>");
+bottomlink();
+}
+
+else if($Report_ID==7) //rework fixture etc
+{
+		print("<form name=\"power\" action=\"rework.php\" method=\"post\" enctype = \"multipart/form-data\">\n");
+		print("<table>");		
+		print("<tr><td>");
+		print("Start Date.</td>");
+		$sdt=date('d-m-Y');
+		print("<td><input type=\"Text\" name=\"StartDate\" value='$sdt'/></td>");			
+		print("<td>");	
+		print("End Date.</td>");
+		$edt=date('d-m-Y');
+		print("<td><input type=\"Text\" name=\"EndDate\" value='$edt'/></td>");			
+		print("</tr>");
+		print("<tr><td><input type=\"submit\" name=\"submit\" value=\"Submit\"/></td></tr>");
+		print("</form>");
+
+		print("<script language=\"JavaScript\">");
+ 		print("new validateForm(document.forms['power']);");
+ 		print("</script>");
+bottomlink();
+}
 
 else
 {

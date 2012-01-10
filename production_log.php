@@ -18,7 +18,7 @@ $query.="INNER JOIN production as prod ON prod.Machine_ID=ma.Machine_ID ";
 $query.="INNER JOIN Operator as ope ON ope.Operator_ID=prod.Operator_ID ";
 $query.="INNER JOIN Operation as opn ON opn.Operation_NO=prod.Operation_NO ";
 $query.="INNER JOIN Component as comp ON comp.Drawing_ID=prod.Drawing_ID WHERE ";
-$query.="prod.Start_Date_Time >=DATE_SUB(CURDATE(), INTERVAL 14 DAY);";
+$query.="prod.Start_Date_Time >=DATE_SUB(CURDATE(), INTERVAL 7 DAY);";
 	
 	
 }else{
@@ -28,7 +28,7 @@ $query.="INNER JOIN production as prod ON prod.Machine_ID=ma.Machine_ID ";
 $query.="INNER JOIN Operator as ope ON ope.Operator_ID=prod.Operator_ID ";
 $query.="INNER JOIN Operation as opn ON opn.Operation_NO=prod.Operation_NO ";
 $query.="INNER JOIN Component as comp ON comp.Drawing_ID=prod.Drawing_ID WHERE ";
-$query.="prod.Start_Date_Time >=DATE_SUB(CURDATE(), INTERVAL 14 DAY) AND prod.Machine_ID=$mcno;";
+$query.="prod.Start_Date_Time >=DATE_SUB(CURDATE(), INTERVAL 7 DAY) AND prod.Machine_ID=$mcno;";
 
 }
 

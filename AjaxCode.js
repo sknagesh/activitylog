@@ -240,6 +240,21 @@ function validateForm(oForm) {
 
 		}
 
+		if (oForm.Remarks) {
+
+			if (oForm.elements['Remarks'].value != "") {
+				var atpos = oForm.elements['Remarks'].value.indexOf("&");
+
+				if (atpos > 0) {
+					alert("Please enter only letter and numeric characters in Remarks");
+					oForm.elements['Remarks'].focus();
+					return (false);
+				}
+			}
+
+		}
+
+
 		if (oForm.Drawing_NO) {
 			if (oForm.elements['Drawing_NO'].value.length < 1) {
 				alert("Please enter Drawing Number");
