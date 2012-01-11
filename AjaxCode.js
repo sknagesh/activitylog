@@ -424,8 +424,10 @@ function PopulateProductionLog(OperationNode) {
 	var Program_NO = OperationNode.getElementsByTagName('programno');
 	var Quantity = OperationNode.getElementsByTagName('quantity');
 	var Remarks = OperationNode.getElementsByTagName('remarks');
+	var Production_ID = OperationNode.getElementsByTagName('productionid');
 	var logcount = OperationNode.getElementsByTagName('logcount');
-	document.write("<h1> Production Report For Last 14 Days</h1>");
+
+	document.write("<h1> Production Report For Last 7 Days</h1>");
 	document.write("<script src=\"AjaxCode.js\"></script>");
 	document.write("<form name=\"preport\"\n");
  	document.write("<td><input type=\"radio\" onClick=\"return prodreptype(document.forms['preport'])\" ID=\"0\" name=\"prod\" value=\"0\" /> All Machines</td>");
@@ -437,11 +439,11 @@ function PopulateProductionLog(OperationNode) {
  	document.write("<td><input type=\"radio\" onClick=\"return prodreptype(document.forms['preport'])\" ID=\"6\" name=\"prod\" value=\"6\" /> F3</td>");
  	document.write("<td><input type=\"radio\" onClick=\"return prodreptype(document.forms['preport'])\" ID=\"7\" name=\"prod\" value=\"7\" /> Slim-3</td>");
 	document.write("<table  border=1 width = 100% cellspacing=1>");
-	document.write("<tr><th>Machine</th><th>Drawing No</th><th>Type</th><th>Operation</th>");
+	document.write("<tr><th>Log ID</th><th>Machine</th><th>Drawing No</th><th>Type</th><th>Operation</th>");
 	document.write("<th>Start Date & Time</th><th>End Date& Time</th><th>Total Time</th>");
 	document.write("<th>Operator</th><th>Program NO</th><th>Quantity</th><th>Remarks</th></tr><tbody>");
 	for ( var count = 0; count < Machine_Name.length; count++) {
-document.write("<tr><td>"+GetInnerText(Machine_Name[count])+"</td><td>"+GetInnerText(Drawing_NO[count])+"</td><td>"+GetInnerText(Prod_Type[count])+"</td><td>"+GetInnerText(Operation_Desc[count])+"</td>");
+document.write("<tr><td>"+GetInnerText(Production_ID[count])+"</td><td>"+GetInnerText(Machine_Name[count])+"</td><td>"+GetInnerText(Drawing_NO[count])+"</td><td>"+GetInnerText(Prod_Type[count])+"</td><td>"+GetInnerText(Operation_Desc[count])+"</td>");
 document.write("<td>"+GetInnerText(Start_Date_Time[count])+"</td><td>"+GetInnerText(End_Date_Time[count])+"</td><td>"+GetInnerText(totaltime[count])+"</td><td>"+GetInnerText(Operator_Name[count])+"</td>");
 document.write("<td>"+GetInnerText(Program_NO[count])+"</td><td>"+GetInnerText(Quantity[count])+"</td>");
 	if(GetInnerText(Remarks[count])=="")
